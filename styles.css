@@ -29,7 +29,7 @@ body {
 /*-------------------------------------------------------------------*/
 
 nav {
-    background: white;
+    background: #F8F0E3;
     height: 80px;
     width: 100%;
     background-color: #F8F0E3;
@@ -41,32 +41,33 @@ label.logo {
     padding: 0 100px;
     font-weight: bold;
 }
-nav ul {
+nav .navbar_content {
     float: right;
     margin-right: 100px;
     margin-top: 30px;
 }
-nav ul li {
+nav .navbar_content li {
     display: inline-block;
     margin: 0 20px;
 }
-nav ul li a {
+nav .navbar_content li a {
     color: black;
     font-size: 17px;
     border-radius: 3px;
 }
-a.active,
-a:hover {
+.active,
+.active:hover {
     transition: 0.5s;
 }
-a {
+.active {
     display: inline-block;
     position: relative;
     color: black;
 }
 
-a:after {
+.active:after {
     content: '';
+    z-index: 99 !important;
     position: absolute;
     width: 100%;
     transform: scaleX(0);
@@ -77,7 +78,7 @@ a:after {
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
-a:hover:after{
+.active:hover:after{
 	transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -94,7 +95,7 @@ a:hover:after{
     display: none;
 }
 /*--------------------------------------------------------------------*/
-/*-------------------------- Landing Page -------------------------------*/
+/*-------------------------- LANDING PAGE -------------------------------*/
 /*-------------------------------------------------------------------*/
 article {
     position: relative;
@@ -106,15 +107,16 @@ article {
   h1 {
     font-size: 2.4rem;
     margin: 0 0 0.75rem 0;
+   
   }
   
   /* Pattern styles */
-  .container {
+  .container1 {
     display: grid;
   }
   
   .left-half {
-    background: white;
+    background: #F8F0E3;
     grid-column: 1;
     height: 50vh;
     text-align: left;
@@ -124,7 +126,7 @@ article {
   }
   
   .right-half {
-    background: white;
+    background: #F8F0E3;
     grid-column: 2;
     height: 50vh;
     text-align: left;
@@ -132,6 +134,19 @@ article {
 
 
   }
+  .name{
+    filter: url(#threshold) blur(0.2px);
+    font-size: 4rem;
+  }
+
+  .icons{
+      margin-top: 10px;
+      
+  }
+  .icon_link{
+      color: black;
+  }
+ 
 /*--------------------------------------------------------------------*/
 /*-------------------------- MEDIA QUERY -------------------------------*/
 /*--------------------------------------------------------------------*/
@@ -160,7 +175,9 @@ article {
         display: block;
     }
     ul {
-        position: fixed;
+        z-index: 99 !important;
+
+        position: absolute;
         width: 100%;
         height: 100vh;
         top: 80px;
@@ -168,7 +185,7 @@ article {
         top: 80px;
         transition: all 0.5s;
         text-align: center;
-        background-color: white;
+        background-color: #F8F0E3;
     }
     nav ul li {
         display: block;
