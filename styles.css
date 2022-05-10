@@ -94,10 +94,14 @@ nav .navbar_content li a {
 #check {
     display: none;
 }
+
+
+
+
 /*--------------------------------------------------------------------*/
 /*-------------------------- LANDING PAGE -------------------------------*/
 /*-------------------------------------------------------------------*/
-article {
+.left_art, .right_art {
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
@@ -120,7 +124,8 @@ article {
     grid-column: 1;
     height: 50vh;
     text-align: left;
-    margin-left: 42%;
+    margin-left: 35%;
+    margin-top: 12%;
     background-color: #F8F0E3;
 
   }
@@ -131,6 +136,8 @@ article {
     height: 50vh;
     text-align: left;
     background-color: #F8F0E3;
+    margin-top: 12%;
+
 
 
   }
@@ -146,7 +153,58 @@ article {
   .icon_link{
       color: black;
   }
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 35px;
+    text-align: left;
+    text-decoration: none;
+    margin: 0px 2px;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .fa:hover {
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  .fa-facebook {
+    background: #F8F0E3;
+    color: black;
+  }
+  
+  .fa-twitter {
+    background: #F8F0E3;
+    color: black;
+  }
+  
+  .fa-google {
+    background: #F8F0E3;
+    color: black;
+  }
+  
+  .fa-linkedin {
+    background: #F8F0E3;
+    color: black;
+  }
+  
+  /*--------------------------------------------------------------------*/
+/*-------------------------- ABOUT ME -------------------------------*/
+/*-------------------------------------------------------------------*/
+.container2 {
+    margin: auto;
+    margin-top: 15%;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+  }
  
+  .about_title{
+    font-size: 4rem;
+    text-align: center;
+
+  }
 /*--------------------------------------------------------------------*/
 /*-------------------------- MEDIA QUERY -------------------------------*/
 /*--------------------------------------------------------------------*/
