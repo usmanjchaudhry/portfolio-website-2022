@@ -14,15 +14,25 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+   
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif
+    
+    font-family: 'Playfair Display', serif;
+    background-color: #F8F0E3;
 }
+
+
+/*--------------------------------------------------------------------*/
+/*-------------------------- NAVBAR -------------------------------*/
+/*-------------------------------------------------------------------*/
+
 nav {
-    background: white;
+    background: #F8F0E3;
     height: 80px;
     width: 100%;
+    background-color: #F8F0E3;
 }
 label.logo {
     color: black;
@@ -31,32 +41,33 @@ label.logo {
     padding: 0 100px;
     font-weight: bold;
 }
-nav ul {
+nav .navbar_content {
     float: right;
     margin-right: 100px;
     margin-top: 30px;
 }
-nav ul li {
+nav .navbar_content li {
     display: inline-block;
     margin: 0 20px;
 }
-nav ul li a {
+nav .navbar_content li a {
     color: black;
     font-size: 17px;
     border-radius: 3px;
 }
-a.active,
-a:hover {
+.active,
+.active:hover {
     transition: 0.5s;
 }
-a {
+.active {
     display: inline-block;
     position: relative;
     color: black;
 }
 
-a:after {
+.active:after {
     content: '';
+    z-index: 99 !important;
     position: absolute;
     width: 100%;
     transform: scaleX(0);
@@ -67,7 +78,7 @@ a:after {
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
-a:hover:after{
+.active:hover:after{
 	transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -84,11 +95,124 @@ a:hover:after{
     display: none;
 }
 
-/*--------------------------*/
-/*----- MEDIA QUERRY -----*/
-/*--------------------------*/
+
+
+
+/*--------------------------------------------------------------------*/
+/*-------------------------- LANDING PAGE -------------------------------*/
+/*-------------------------------------------------------------------*/
+.left_art, .right_art {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.4rem;
+    margin: 0 0 0.75rem 0;
+   
+  }
+  
+  /* Pattern styles */
+  .container1 {
+    display: grid;
+  }
+  
+  .left-half {
+    background: #F8F0E3;
+    grid-column: 1;
+    height: 50vh;
+    text-align: left;
+    margin-left: 35%;
+    margin-top: 12%;
+    background-color: #F8F0E3;
+
+  }
+  
+  .right-half {
+    background: #F8F0E3;
+    grid-column: 2;
+    height: 50vh;
+    text-align: left;
+    background-color: #F8F0E3;
+    margin-top: 12%;
+
+
+
+  }
+  .name{
+    filter: url(#threshold) blur(0.2px);
+    font-size: 4rem;
+  }
+
+  .icons{
+      margin-top: 10px;
+      
+  }
+  .icon_link{
+      color: black;
+  }
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 35px;
+    text-align: left;
+    text-decoration: none;
+    margin: 0px 2px;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .fa:hover {
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  .fa-facebook {
+    background: #F8F0E3;
+    color: black;
+  }
+  
+  .fa-twitter {
+    background: #F8F0E3;
+    color: black;
+  }
+  
+  .fa-google {
+    background: #F8F0E3;
+    color: black;
+  }
+  
+  .fa-linkedin {
+    background: #F8F0E3;
+    color: black;
+  }
+  
+  /*--------------------------------------------------------------------*/
+/*-------------------------- ABOUT ME -------------------------------*/
+/*-------------------------------------------------------------------*/
+.container2 {
+    margin: auto;
+    margin-top: 15%;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+  }
+ 
+  .about_title{
+    font-size: 4rem;
+    text-align: center;
+
+  }
+/*--------------------------------------------------------------------*/
+/*-------------------------- MEDIA QUERY -------------------------------*/
+/*--------------------------------------------------------------------*/
 
 @media(max-width: 1011px) {
+/*--------------------------------------------------------------------*/
+/*-------------------------- NAVBAR -------------------------------*/
+/*-------------------------------------------------------------------*/
     label.logo {
         font-size: 30px;
         padding-left: 50px;
@@ -97,13 +221,21 @@ a:hover:after{
         font-size: 16px;
     }
 }
+/*--------------------------------------------------------------------*/
+/*-------------------------- MEDIA QUERY -------------------------------*/
+/*--------------------------------------------------------------------*/
 
 @media(max-width: 988px) {
+/*--------------------------------------------------------------------*/
+/*-------------------------- NAVBAR -------------------------------*/
+/*-------------------------------------------------------------------*/
     .checkbtn {
         display: block;
     }
     ul {
-        position: fixed;
+        z-index: 99 !important;
+
+        position: absolute;
         width: 100%;
         height: 100vh;
         top: 80px;
@@ -111,7 +243,7 @@ a:hover:after{
         top: 80px;
         transition: all 0.5s;
         text-align: center;
-        background-color: white;
+        background-color: #F8F0E3;
     }
     nav ul li {
         display: block;
