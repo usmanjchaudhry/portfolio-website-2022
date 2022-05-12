@@ -29,79 +29,80 @@ body {
 /*-------------------------------------------------------------------*/
 
 nav {
-    background: #F8F0E3;
-    height: 80px;
-    width: 100%;
-    background-color: #F8F0E3;
+  background: #F8F0E3;
+  height: 80px;
+  width: 100%;
 }
 label.logo {
-    color: black;
-    font-size: 25px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
+  color: black;
+  font-size: 25px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
 }
-nav .navbar_content {
-    float: right;
-    margin-right: 100px;
-    margin-top: 30px;
+nav ul {
+  float: right;
+  margin-right: 100px;
+  margin-top: 30px;
 }
-nav .navbar_content li {
-    display: inline-block;
-    margin: 0 20px;
+nav ul li {
+  display: inline-block;
+  margin: 0 20px;
 }
-nav .navbar_content li a {
-    color: black;
-    font-size: 17px;
-    border-radius: 3px;
+nav ul li a {
+  color: black;
+  font-size: 17px;
+  border-radius: 3px;
 }
-.active,
-.active:hover {
-    transition: 0.5s;
+a.active,
+a:hover {
+  transition: 0.5s;
 }
-.active {
-    display: inline-block;
-    position: relative;
-    color: black;
+a {
+  display: inline-block;
+  position: relative;
+  color: black;
 }
 
-.active:after {
-    content: '';
-    z-index: 99 !important;
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: black;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
-.active:hover:after{
-	transform: scaleX(1);
-  transform-origin: bottom left;
+a:hover:after{
+transform: scaleX(1);
+transform-origin: bottom left;
 }
 .checkbtn {
-    font-size: 30px;
-    color: black;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
 }
 #check {
-    display: none;
+  display: none;
 }
 
-
-
+.fa-bars{
+  margin-right: 100%;
+}
 
 /*--------------------------------------------------------------------*/
 /*-------------------------- LANDING PAGE -------------------------------*/
 /*-------------------------------------------------------------------*/
 .left_art, .right_art {
+  /*border: 3px solid green;*/
+
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
@@ -120,17 +121,21 @@ nav .navbar_content li a {
   }
   
   .left-half {
+    /*border: 3px solid green;*/
+
     background: #F8F0E3;
     grid-column: 1;
     height: 50vh;
     text-align: left;
-    margin-left: 35%;
+    margin-left: 20%;
     margin-top: 12%;
     background-color: #F8F0E3;
 
   }
   
   .right-half {
+    /*border: 3px solid green;*/
+
     background: #F8F0E3;
     grid-column: 2;
     height: 50vh;
@@ -156,17 +161,19 @@ nav .navbar_content li a {
   .fa {
     padding: 10px;
     font-size: 30px;
-    width: 35px;
-    text-align: left;
+    width: 45px;
+    text-align: center;
     text-decoration: none;
     margin: 0px 2px;
     border-radius: 50%;
     box-shadow: 0 1px 2px rgba(0,0,0,0.15);
     transition: box-shadow 0.3s ease-in-out;
+    
   }
   
   .fa:hover {
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 5px 15px rgba(0,0,0,7.77);
+      cursor: pointer;
   }
   
   .fa-facebook {
@@ -193,18 +200,71 @@ nav .navbar_content li a {
 /*-------------------------- ABOUT ME -------------------------------*/
 /*-------------------------------------------------------------------*/
 .container2 {
-    margin: auto;
-    margin-top: 15%;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
+  margin-top: -1%;
+    display: grid;
+
   }
  
   .about_title{
+    margin-top: 10%;
     font-size: 4rem;
     text-align: center;
 
   }
+  .about_me_left{
+
+    background: #F8F0E3;
+    grid-column: 1;
+    height: 50vh;
+    text-align: left;
+    margin-left: 35%;
+    margin-top: 14%;
+    background-color: #F8F0E3;
+
+
+  }
+  .about_me_right{
+
+    background: #F8F0E3;
+    grid-column: 2;
+    height: 50vh;
+    text-align: left;
+    background-color: #F8F0E3;
+    margin-top:5%;
+    margin-right: 15%;
+  }
+  .left_about,
+  .right_about{
+    position: relative;
+    top: 40%;
+    transform: translate(0, -40%);
+    padding: 1rem;
+  }
+
+  .about_text,
+  .about_text2,
+  .about_text3,
+  .about_text4,
+  .about_text5{
+    font-size: large;
+    text-indent: 40px;
+    line-height: 22px;
+  }
+  .about_text2,
+  .about_text3,
+  .about_text4,
+  .about_text5
+  {
+    margin-top: 20px;
+  }
+
+ /*--------------------------------------------------------------------*/
+/*-------------------------- PROJECTS  -------------------------------*/
+/*-------------------------------------------------------------------*/
+
+
+
+
 /*--------------------------------------------------------------------*/
 /*-------------------------- MEDIA QUERY -------------------------------*/
 /*--------------------------------------------------------------------*/
