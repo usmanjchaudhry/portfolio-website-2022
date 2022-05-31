@@ -29,6 +29,7 @@ body {
 /*-------------------------------------------------------------------*/
 
 nav {
+
   background: #F8F0E3;
   height: 80px;
   width: 100%;
@@ -43,6 +44,7 @@ label.logo {
   border-radius: 3px;
 
 }
+
 nav ul {
   float: right;
   margin-right: 100px;
@@ -100,6 +102,7 @@ transform-origin: bottom left;
   margin-right: 100%;
 }
 
+
 /*--------------------------------------------------------------------*/
 /*-------------------------- LANDING PAGE -------------------------------*/
 /*-------------------------------------------------------------------*/
@@ -124,28 +127,36 @@ transform-origin: bottom left;
   }
   
   .left-half {
-
     background: #F8F0E3;
     grid-column: 1;
     height: 50vh;
     text-align: left;
-    margin-left: 20%;
     margin-top: 12%;
     background-color: #F8F0E3;
+    width: 100%;
 
   }
   
   .right-half {
-    /*border: 3px solid green;*/
 
     background: #F8F0E3;
     grid-column: 2;
     height: 50vh;
-    text-align: left;
     background-color: #F8F0E3;
-    margin-top: 12%;
+    margin-top: 8.5%;
+    width: 100%;
 
 
+
+  }
+  .left_art{
+    position: relative;
+    left: 300px;
+    margin-top: 50px;
+
+  }
+  .right_art{
+    align-items: center;
 
   }
   .name{
@@ -168,7 +179,7 @@ transform-origin: bottom left;
     text-decoration: none;
     margin: 0px 2px;
     border-radius: 50%;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,10);
     transition: box-shadow 0.3s ease-in-out;
     
   }
@@ -196,6 +207,16 @@ transform-origin: bottom left;
   .fa-linkedin {
     background: #F8F0E3;
     color: black;
+  }
+
+  .pic01{
+    margin-top: 100px;
+    width: 38%;
+    height: 50%;
+    position: relative;
+    left: 400px;
+    border-radius: 38px;
+
   }
   
   /*--------------------------------------------------------------------*/
@@ -274,7 +295,7 @@ margin-right: 10%;
 
 }
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,10);
   transition: 0.3s;
   border-radius: 5px;
   height: 150px;
@@ -307,7 +328,7 @@ margin-right: 10%;
 }
 .collapsible {
   border: 1px solid black;  
-  box-shadow: 0 0px 3px 0 rgba(0,0,0,7);
+  box-shadow: 0 0px 3px 0 rgba(0,0,0,1);
   font-size: 27px;
   background-color: #F8F0E3;
   color: black;
@@ -361,7 +382,7 @@ margin-right: 10%;
   row-gap: 1em;
 }
 .card1 {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
   transition: 0.3s;
   border-radius: 5px;
   height: 300px;
